@@ -2,7 +2,7 @@
 set -e
 
 if [ -n "$ELASTALERT_CREATE_INDEX" ]; then
-  exec elastalert-create-index \
+  elastalert-create-index \
     --config "$ELASTALERT_CONFIG" \
     --index "$ELASTALERT_INDEX" \
     --old-index ""
