@@ -10,7 +10,6 @@ Docker image with Elastalert on Alpine Linux.
 # Environment
 
 * ELASTALERT_DIR          - /opt/elastalert
-* ELASTALERT_RULES_DIR    - $ELASTALERT_DIR/rules
-* ELASTALERT_CONFIG       - $ELASTALERT_DIR/config.yaml
+* ELASTALERT_CONFIG       - /opt/elastalert/config.yaml
 * ELASTALERT_INDEX        - Name of Elastalert writeback index in Elasticseach. Defaults to `elastalert_status`.
 * ELASTALERT_CREATE_INDEX - Provide if you want to run `elastalert-create-index`

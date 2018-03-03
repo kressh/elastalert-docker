@@ -3,9 +3,9 @@ set -e
 
 if [ -n "$ELASTALERT_CREATE_INDEX" ]; then
   exec elastalert-create-index \
-    --config "${ELASTALERT_CONFIG}" \
-    --index "${ELASTALERT_INDEX}" \
+    --config "$ELASTALERT_CONFIG" \
+    --index "$ELASTALERT_INDEX" \
     --old-index ""
 fi
 
-exec elastalert --config ${ELASTALERT_CONFIG}
+exec elastalert --config $ELASTALERT_CONFIG

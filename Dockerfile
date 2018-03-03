@@ -3,8 +3,7 @@ FROM alpine
 ENV \
   BUILD_DEPS="gcc musl-dev python2-dev musl-dev gcc openssl-dev libffi-dev openssl-dev" \
   ELASTALERT_DIR=/opt/elastalert \
-  ELASTALERT_RULES_DIR=$ELASTALERT_DIR/rules \
-  ELASTALERT_CONFIG=$ELASTALERT_DIR/config.yaml \
+  ELASTALERT_CONFIG=/opt/elastalert/config.yaml \
   ELASTALERT_INDEX=elastalert_status
 
 RUN apk add --no-cache ca-certificates openssl python2 py2-pip
