@@ -6,8 +6,7 @@ ENV \
   ELASTALERT_CONFIG=/opt/elastalert/config.yaml \
   ELASTALERT_INDEX=elastalert_status
 
-RUN apk add --no-cache ca-certificates openssl python2 py2-pip
-RUN apk add --no-cache $BUILD_DEPS
+RUN apk add --no-cache ca-certificates openssl python2 py2-pip libmagic $BUILD_DEPS
 
 RUN pip install elastalert
 
