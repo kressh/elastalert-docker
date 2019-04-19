@@ -8,7 +8,9 @@ ENV \
 
 RUN apk add --no-cache ca-certificates openssl python2 py2-pip libmagic $BUILD_DEPS
 
-RUN pip install elastalert
+RUN pip install \ 
+  elasticsearch==7.0.0 \
+  elastalert
 
 RUN \
   apk del $BUILD_DEPS && \
