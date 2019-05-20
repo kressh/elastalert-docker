@@ -8,7 +8,7 @@ ENV \
 
 RUN apk add --no-cache ca-certificates openssl python2 py2-pip libmagic $BUILD_DEPS
 
-RUN pip install "elastalert>=0.2.0b"
+RUN pip install "elastalert>=0.2.0b" "urllib3<1.25,>=1.20"
 
 RUN \
   apk del $BUILD_DEPS && \
